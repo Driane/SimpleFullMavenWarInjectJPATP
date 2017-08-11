@@ -18,8 +18,8 @@ import org.formation.jsf.service.IStudentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-//annoter : "nommer"
-//en session
+@Named
+@SessionScoped
 public class StudentController implements Serializable {
 
 	private static final long serialVersionUID = 3774463683041113840L;
@@ -27,7 +27,7 @@ public class StudentController implements Serializable {
 	private List<Student> students;
 	private static Logger LOGGER = LoggerFactory.getLogger(StudentController.class);
 
-	//Injecter
+	@Inject
 	private IStudentService service;
 
 	public StudentController() throws Exception {
