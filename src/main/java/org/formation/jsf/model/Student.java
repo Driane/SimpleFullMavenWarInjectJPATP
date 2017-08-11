@@ -1,16 +1,16 @@
 package org.formation.jsf.model;
 
-import javax.faces.bean.ManagedBean;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-//Completer pour JSF
-//Completer pour JPA
+// Compléter pour jsf
+@Entity
 public class Student {
 
-	//Completer pour JPA
+	@Id
+	@GeneratedValue (strategy=GenerationType.AUTO)
 	private int id;
 	private String firstName;
 	private String lastName;
