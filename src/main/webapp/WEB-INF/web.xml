@@ -22,7 +22,7 @@
 		<listener-class>com.sun.faces.config.ConfigureListener</listener-class>
 	</listener>
 	<welcome-file-list>
-		<welcome-file>list-students.xhtml</welcome-file>
+		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
 	<servlet>
 		<servlet-name>Faces Servlet</servlet-name>
@@ -35,5 +35,27 @@
 	</servlet-mapping>
 
 
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Wildcard * means all the resources in the
+				application
+				require authentication</web-resource-name>
+			<url-pattern>/*</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+			<http-method>PUT</http-method>
+			<http-method>DELETE</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>tomcat</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<form-login-page>/login.html</form-login-page>
+			<form-error-page>/error.xhtml</form-error-page>
+		</form-login-config>
+	</login-config>
 
 </web-app>
