@@ -1,11 +1,12 @@
 package org.formation.jsf.model;
 
+import javax.faces.bean.ManagedBean;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-// Compléter pour jsf
+@ManagedBean
 @Entity
 public class Student {
 
