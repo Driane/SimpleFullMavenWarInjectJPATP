@@ -1,0 +1,6 @@
+org/formation/jsf/service/IStudentService.class
+org/formation/jsf/service/StudentService.class
+org/formation/jsf/model/Student.class
+org/formation/jsf/dao/IStudentDao.class
+org/formation/jsf/view/StudentController.class
+org/formation/jsf/dao/StudentDao.class
